@@ -27,7 +27,7 @@ let incr = 1;
 
 function rememberMyFilms() {
     while (incr <= 2) {
-        lastMovie = prompt(`What is last movie that you've seen?`, ``);
+        lastMovie = prompt(`What is last movie that you've seen?`, ``).trim();
 
         if (lastMovie === null || lastMovie.length == 0 || lastMovie.length > 50) {
             continue;
@@ -70,7 +70,7 @@ if (personalMovieDB.privat === false) {
 
 function writeYourGenres() {
     for (let i = 1; i <= 3; i++) {
-        personalMovieDB.genres[i - 1] = prompt(`Your favorite genre under number ${i}`);
+        personalMovieDB.genres[i - 1] = prompt(`Your favorite genre number ${i}`);
     }
 }
 
